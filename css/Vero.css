@@ -1,0 +1,1263 @@
+
+/*   https://studiodivo.fr/portfolio_page/boutique-magasin-bio/  
+*/
+
+/*----------------------------------------------*/
+/*           STYLE POUR MOBILE                  */
+/*----------------------------------------------*/
+
+	*   /* selecteur universel * ce truc sert à éviter les decallages de padding ou margin par defaut existant sur certaines balises */
+	{
+		box-sizing : border-box;
+	}
+
+	body
+	{
+			background-color : rgb(237, 199, 237);
+			font-family : Trirong, Poppins, Sans-cherif;
+			font-size : 12px;
+	}
+
+	input, button
+	{
+		height : 40px;
+		display : inline-block;
+		margin : 30px;
+	}
+
+	.Sections{
+		position : relative;
+		margin : 20px auto;
+		border : 2px solid rgba(192,192,192,0.7);
+		border-radius : 10px;
+		float : top;
+		padding : 10px;
+		width : 62%;
+		min-width : 376px;
+		background-color : white;
+	}
+
+	.image_profil                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		height : 160px;              
+		width : 160px;
+		/* margin : auto;            /* POURQUOI EST CE QUE LE MARGIN : AUTO to seul NE FONCTIONNE PAS ????? */
+		margin : 0 20px 0px 0;       /* Il y a un lien ETROIT entre le MARGIN-BOTTOM et le positionnement de la BARRE DE MENU de navigation tout juste en bas */
+		border-radius : 50%;         /* Astuce permettant d'encercler mon image */
+		display : inline;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		float : left;                /* je veux que l'image flotte vers la gauche*/
+	}
+
+	.img_grandeur_1
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 313px;
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+		/*border : 1px solid yellow;*/
+	}
+
+	.img_grandeur_paysage
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 313px;
+		height : 300px;
+		margin : auto;
+		border-radius : 10px;
+	}
+
+	.img_grandeur_carre
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 313px;
+		height : 313px;
+		margin : auto;
+		border-radius : 10px;
+	}
+	.image_commentaire_gauche                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		margin : 10px;
+		margin-top : 20px;
+		margin-bottom : 20px;
+		position : relative;
+		border-radius : 10%;         /* Astuce permettant d'encercler mon image */
+		display : inline-block;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		float : left;                /* je veux que l'image flotte vers la gauche*/
+		clear : both;
+	}
+
+	.image_commentaire_droite                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		margin : 10px;
+		margin-top : 20px;
+		margin-bottom : 20px;
+		position : relative;
+		border-radius : 5%;         /* Astuce permettant d'encercler mon image */
+		display : inline-block;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		float : right;
+		clear : both;
+	}
+
+	#messageErreur                            /* Le petit message qui apparait en rouge  */
+	{
+		color : red;
+		font-weight : bold;
+		font-size : 12px;
+		margin : auto;
+		margin-top : -5px;
+		margin-bottom : 10px;
+		display : inline-block;
+		visibility : hidden;
+	}
+
+	#OK                                      /* Le boutton OK  */
+	{
+		visibility : hidden;
+	}
+
+	p
+	{
+		text-align : justify;
+	}
+
+	.logo                            /* Toutes les images miniaturisées LOGO utilisent cette class.  */
+	{
+		width : 25px;                /* Dimenssions de mon LOGO*/
+		height : 25px;
+		/*margin-bottom : -7px; */       /* Un decallage des LOGO que j'ai du coriger avec ce retrait vers la haut. C'était pas tres beau avoir au début */
+	}
+
+	h2
+	{
+		text-align : center;
+		padding : 5px;
+		width : 75%;
+		margin : auto;
+		margin-bottom : 15px;
+		font-family : Audiowide;
+		border-bottom : 1px black solid; 
+		text-shadow : 4px 4px 4px fuchsia;
+	}
+
+	h3
+	{
+		font-family : Trirong;                     /* Meme style d'écriture que h2 : A propos, langues, competences, Experience, Formation Academique*/
+		text-shadow : 4px 4px 4px fuchsia;
+	}
+
+	h4
+	{
+		font-weight : bold; 
+	}
+
+	.header_gastronomie                           /* balise contenant l'image de PROFIL et les contacts */
+	{
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%;    /* 700px */
+		height : 230px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		min-width : 370px;
+		/*background-image : url("../img/background_image/univers_2.jpg");*/
+		background-image : url("../Images/Profil/foutou_sauce_arachide.jpg");
+		/*background-image : url("../img/background_image/globules_rouges.jpg");*/
+		background-position : center; /*     rester au centre si on reduit notre image*/
+		background-repeat : no-repeat;
+		background-size : cover;
+		border : 2px solid rgba(200, 200, 200);
+	}
+
+	.header_perruque                           /* balise contenant l'image de PROFIL et les contacts */
+	{
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%; 
+		height : 230px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		min-width : 370px;
+		/*background-image : url("../img/background_image/univers_2.jpg");*/
+		background-image : url("../Images/Profil/perruque.jpg");
+		/*background-image : url("../img/background_image/globules_rouges.jpg");*/
+		background-position : center; /*     rester au centre si on reduit notre image*/
+		background-repeat : no-repeat;
+		background-size : cover;
+		/*background-color : rgba(247, 248, 243);*/
+		border : 2px solid rgba(200, 200, 200);
+	}
+
+	ul
+	{
+		padding : 0;  /*Dans un ul, le padding des li est decalle par deffault. Donc je dois le mettre a 0 pour avoir le controle ABSOLU sur la position. */
+	}
+
+	nav ul li
+	{
+		list-style-type : none;
+		margin-left : 20px;
+		margin-right : 20px;
+		display : inline;
+		  /* par defaut, les li sont des display BLOCK. On les change donc pour les mettre INLINE */
+						/* REMARQUE TRES IMPORTANTE : un composant BLOCK peut avoir une HEIGHT et une WIDTH 
+														mais un composant INLINE n'a NI HEIGHT NI WIDTH 
+														
+							SOLUTION : INLINE-BLOCK rassemble le meilleur des 2 mondes : INLINE et BLOCK
+							DISPLAY : none   (permet de faire DISPATRAITRE un éléments, pour faire un éffet JavaScript)
+														
+							*/
+	}
+
+	a, li > a
+	{
+		margin-top : 10px;
+		font-size : 16px;
+		color : yellow;
+	}
+
+	.conteneur-index-mot-de-pass
+	{
+		width : 75%;
+		margin : auto;
+		margin-bottom: 50px;
+		padding : 50px;
+		display : flex;
+		flex-direction : column;
+		justify-content : space-around; /* space-around */
+	}
+
+	.element
+	{
+		font-size : 12px; 
+		padding-top : 20px;
+		margin : 10px;
+		border : 1px black solid;
+		border-radius : 10px;
+		box-shadow : 4px 4px 4px rgba(180, 180, 180, 1);
+		width : 200px;
+		background-color: rgba(230, 230, 230, 1);     /* margin-bottom : 150px;      */ /* Remarque : contrairement a la Balise P, la balise Section n'a PAS de margin par default. Sio on veut donc decaller une section, il faut definir une marge */
+	}
+
+	.image_4profils_carre
+	{
+		height : 180px;
+		width : 160px;
+		margin-left : 20px;
+		margin-right : 30px;
+		margin-bottom : 10px;
+		border-radius : 10px 10px 0 0;
+	}
+
+	.background-cadre-contact
+	{
+		width : 50%;
+		margin : auto;
+		background-color : yellow;
+		margin-top : 100px;
+		margin-bottom : 100px;
+	}
+
+	.button_password
+	{
+		display : inline-block;
+		margin : auto;
+		margin-top : 20px;
+		margin-left : 320px;
+		height : 40px;
+		background-color : yellow;
+	}
+
+	.cadre-contact
+	{
+		font-size : 12px;
+		border : 1px black solid;
+		border-radius : 10px;
+		box-shadow : 4px 4px 4px purple;
+		width : 200px;
+		/*margin : auto;*/
+		/*padding-top : 20px;*/
+		margin : 50px 50px 50px 50px ;   /* Comment je fais pour mieux centrer les cadre-contacts ? */
+		display : inline-block;          /* la reunion du meilleur des 2 mondes */
+		background-color: rgb(211, 190, 211);     /* margin-bottom : 150px;      */ /* Remarque : contrairement a la Balise P, la balise Section n'a PAS de margin par default. Sio on veut donc decaller une section, il faut definir une marge */
+	}
+
+	.cadre-contact h3, .cadre-contact span /* LES 2 SPAN NE SE CENTRENT PAS */
+	{
+		text-align : center;
+	}
+
+	/*--------------------------------------------------------------------------------------*/
+
+	.login
+	{   
+		display : flex;
+		flex-direction : column;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+	.element2
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		width : 330px;  /* min-width : 350px;  */
+	}
+
+	.element2:nth-child(2)
+	{
+		padding : 10px;
+	}
+
+	/*----------------------------------------------*/
+
+	.login_carre
+	{   
+		display : flex;
+		flex-direction : column;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+	.element2_carre
+	{
+		width : 330px;
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+	}
+	
+	.element2_carre:nth-child(2)
+	{
+		padding : 10px;
+		margin-left : 10px;
+		/* height : 548px; */
+	}
+
+	/*----------------------------------------------*/
+
+	.login_paysage
+	{   
+		display : flex;
+		flex-direction : column;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+	.element2_paysage
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		width : 330px;
+	}
+	.element2_paysage:nth-child(2)
+	{
+		padding : 10px;
+		margin-left : 10px;
+	}
+
+	/*----------------------------------------------*/
+	
+	.login_perruques_gastro
+	{   
+		display : flex;
+		flex-direction : column;
+	/*	 justify-content : space-around; */
+	/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+	/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+	/*   height : aapx;     */
+	/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+		position : relative;
+		margin : auto;
+		/*border : 1px solid blue;*/
+		border-radius : 10px;
+		float : top;
+		justify-content : center;
+		/*width : 670px;*/
+		background-color : white;
+		/*min-width : 295px;*/
+	}
+
+	.element2_perruques_gastro
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		/*min-width : 272px;*/
+	}
+
+	/*-------------------------------------------------*/
+
+	.login_mini
+	{   
+		display : flex;
+		flex-direction : column;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			/*min-width : 300px;*/
+			background-color : fuchsia;
+	}
+	.element2_mini
+	{
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		margin : 5px;
+	}
+	.element2_mini:nth-child(2)
+	{
+		flex-grow : 3;
+		padding : 10px;
+	}
+
+	/*----------------------------------------------------*/
+
+	.login_mini_paysage
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+		position : relative;
+		margin : auto;
+		border-radius : 10px;
+		float : top;
+		justify-content : center;
+		width : 100%;
+		min-width : 364px;
+		background-color : fuchsia;
+	}
+
+	.element2_mini_paysage
+	{
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		margin : 5px;
+	}
+
+	.element2_mini_paysage:nth-child(2)
+	{
+		flex-grow : 2;
+		padding : 10px;
+	}
+
+	/*----------------------------------------------------*/
+
+	.img_grandeur_1
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 100%; /*313px;*/
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+	}
+
+	.img_grandeur_profil
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 250px;
+		height : 250px;
+		margin : auto;
+		border-radius : 10px;
+		bottom : 500px;
+	}
+
+	.img_grandeur_mini
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 100px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+		/*bottom : 500px;*/
+	}
+
+	.img_grandeur_mini_paysage
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 230px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+		/*bottom : 500px;*/
+	}
+
+	.img_grandeur_mini_carre
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 160px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+		/*bottom : 500px;*/
+	}
+
+	.img_grandeur_1_paysage
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 787px; /*313px;*/
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+		/*border : 1px solid yellow;*/
+	}
+
+	.img_grandeur_1_carre
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 548px; /*313px;*/
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+		/*border : 1px solid yellow;*/
+	}
+	.annonces
+	{   /* balise contenant l'image de PROFIL et les contacts */
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%;    /* 700px */
+		height : 500px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		min-width : 370px;
+		background-image : url("../Images/Annonce/annonce_2.png");
+		background-position : center; /*     rester au centre si on reduit notre image */
+		background-repeat : no-repeat;
+		background-size : cover;
+		border : 2px solid red;
+	}
+
+	.image_grandeur_1:hover, .element2:hover, header:hover, .img_grandeur_mini:hover, .element2_mini:hover, .element2_perruques_gastro:hover, .element2_paysage:hover, .element2_carre:hover
+	{
+		box-shadow : 2px 2px 2px fuchsia;
+	}
+
+	.Vero_Mado
+	{
+		width : 300px;
+		height : 225px;
+		border-radius: 150px;
+	}
+
+	.Vero
+	{
+		width : 200px;
+		height : 200px;
+		border-radius: 150px;
+	}
+
+	.Vero_1
+	{
+		position : absolute;
+		left : 330px;
+		top : 475px;
+		width : 200px;
+		height : 200px;
+		border-radius: 150px;
+	}
+
+	.Information
+	{
+		position : relative;
+		margin : 10px auto;
+		border : 1px dotted green;
+		width : 95%;
+		height : 160px;
+		float : top;
+		padding : 10px;
+	}
+
+	.user_photo
+	{
+		width : 170px;
+		height : 150px;
+	/*	 border-radius: 150px;   */
+		position : relative;
+	}
+
+	footer 
+	{
+		position : relative;
+		margin : 40px;
+		margin-top : 1000px;
+		min-height : 20px; 
+		width : 95%;
+		float : bottom;
+		background-color : rgba(192,192,192,0.3);
+		color : black;
+		text-align : center;
+		border : 1px solid rgba(192,192,192,0.3);
+	}
+
+
+
+
+
+
+/*----------------------------------------------*/
+/*           STYLE POUR ORDINATEUR              */
+/*----------------------------------------------*/
+
+
+
+
+
+
+@media only screen and (min-width : 720px) {    /* ou 600 ou 720 px*/
+
+	input, button
+	{
+		height : 40px;
+		display : inline-block;
+		margin-top : 20px;
+	}
+
+	.Sections{
+		position : relative;
+		margin : 20px auto;
+		border : 2px solid rgba(192,192,192,0.7);
+		border-radius : 10px;
+		/*min-height : 180px;*/
+		float : top;
+		padding : 10px;
+		width : 62%;
+		background-color : white;
+	}
+
+	.image_profil                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		height : 160px;              
+		width : 160px;
+		/* margin : auto;            /* POURQUOI EST CE QUE LE MARGIN : AUTO to seul NE FONCTIONNE PAS ????? */
+		margin : 0 20px 0px 0;       /* Il y a un lien ETROIT entre le MARGIN-BOTTOM et le positionnement de la BARRE DE MENU de navigation tout juste en bas */
+		border-radius : 50%;         /* Astuce permettant d'encercler mon image */
+		display : inline;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		float : left;                /* je veux que l'image flotte vers la gauche*/
+	}
+
+	.image_commentaire_gauche                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		margin : 10px;
+		margin-top : 20px;
+		margin-bottom : 20px;
+		position : relative;
+		border-radius : 10%;         /* Astuce permettant d'encercler mon image */
+		display : inline-block;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		float : left;                /* je veux que l'image flotte vers la gauche*/
+		clear : both;
+	}
+
+	.image_commentaire_droite                    /* Image du profil Image priose LINKED-in si je m'en souviens bien*/
+	{
+		margin : 10px;
+		margin-top : 20px;
+		margin-bottom : 20px;
+		position : relative;
+		border-radius : 5%;         /* Astuce permettant d'encercler mon image */
+		display : inline-block;            /* Pour que le nom et les contacts soient sur la meme ligne */
+		clear : both;
+	}
+
+	#messageErreur                            /* Le petit message qui apparait en rouge  */
+	{
+		color : red;
+		font-weight : bold;
+		font-size : 12px;
+		margin : auto;
+		margin-top : -5px;
+		margin-bottom : 10px;
+		display : inline-block;
+		visibility : hidden;
+	}
+
+	#OK                                      /* Le boutton OK  */
+	{
+		visibility : hidden;
+	}
+
+	p
+	{
+		text-align : justify;
+	}
+
+	.logo                            /* Toutes les images miniaturisées LOGO utilisent cette class.  */
+	{
+		width : 25px;                /* Dimenssions de mon LOGO*/
+		height : 25px;
+		/*margin-bottom : -7px; */       /* Un decallage des LOGO que j'ai du coriger avec ce retrait vers la haut. C'était pas tres beau avoir au début */
+	}
+
+	h2
+	{
+		text-align : center;
+		padding : 5px;
+		width : 75%;
+		margin : auto;
+		margin-bottom : 15px;
+		font-family : Audiowide;
+		border-bottom : 1px black solid; 
+		text-shadow : 4px 4px 4px fuchsia;
+	}
+
+	h3
+	{
+		font-family : Trirong;                     /* Meme style d'écriture que h2 : A propos, langues, competences, Experience, Formation Academique*/
+		text-shadow : 4px 4px 4px fuchsia;
+	}
+
+	h4
+	{
+		font-weight : bold; 
+	}
+
+	.header_gastronomie                           /* balise contenant l'image de PROFIL et les contacts */
+	{
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%;    /* 700px */
+		height : 230px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		
+		/*background-image : url("../img/background_image/univers_2.jpg");*/
+		background-image : url("../Images/Profil/foutou_sauce_arachide.jpg");
+		/*background-image : url("../img/background_image/globules_rouges.jpg");*/
+		background-position : center; /*     rester au centre si on reduit notre image*/
+		background-repeat : no-repeat;
+		background-size : cover;
+		/*background-color : rgba(247, 248, 243);*/
+		border : 2px solid rgba(200, 200, 200);
+	}
+
+	.header_perruque                           /* balise contenant l'image de PROFIL et les contacts */
+	{
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%; 
+		height : 230px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		
+		/*background-image : url("../img/background_image/univers_2.jpg");*/
+		background-image : url("../Images/Profil/perruque.jpg");
+		/*background-image : url("../img/background_image/globules_rouges.jpg");*/
+		background-position : center; /*     rester au centre si on reduit notre image*/
+		background-repeat : no-repeat;
+		background-size : cover;
+		/*background-color : rgba(247, 248, 243);*/
+		border : 2px solid rgba(200, 200, 200);
+	}
+
+	ul
+	{
+		padding : 0;  /*Dans un ul, le padding des li est decalle par deffault. Donc je dois le mettre a 0 pour avoir le controle ABSOLU sur la position. */
+	}
+
+	nav ul li
+	{
+		list-style-type : none;
+		margin-left : 20px;
+		margin-right : 20px;
+		display : inline;  /* par defaut, les li sont des display BLOCK. On les change donc pour les mettre INLINE */
+						/* REMARQUE TRES IMPORTANTE : un composant BLOCK peut avoir une HEIGHT et une WIDTH 
+														mais un composant INLINE n'a NI HEIGHT NI WIDTH 
+														
+							SOLUTION : INLINE-BLOCK rassemble le meilleur des 2 mondes : INLINE et BLOCK
+							DISPLAY : none   (permet de faire DISPATRAITRE un éléments, pour faire un éffet JavaScript)
+														
+							*/
+	}
+
+	a, li > a
+	{
+		margin-top : 10px;
+		font-size : 16px;
+		color : yellow;
+	}
+
+	.conteneur-index-mot-de-pass
+	{
+		width : 75%;
+		margin : auto;
+		margin-bottom: 50px;
+		padding : 50px;
+		display : flex;
+		flex-direction : row;
+		justify-content : space-around; /* space-around */
+	}
+
+	.element
+	{
+		font-size : 12px;
+		padding-top : 20px;
+		border : 1px black solid;
+		border-radius : 10px;
+		box-shadow : 4px 4px 4px rgba(180, 180, 180, 1);
+		width : 200px;
+		background-color: rgba(230, 230, 230, 1);     /* margin-bottom : 150px;      */ /* Remarque : contrairement a la Balise P, la balise Section n'a PAS de margin par default. Sio on veut donc decaller une section, il faut definir une marge */
+	}
+
+	.image_4profils_carre
+	{
+		height : 180px;
+		width : 160px;
+		margin-left : 20px;
+		margin-right : 30px;
+		margin-bottom : 10px;
+		border-radius : 10px 10px 0 0;
+	}
+
+	.background-cadre-contact
+	{
+		width : 50%;
+		margin : auto;
+		background-color : yellow;
+		margin-top : 100px;
+		margin-bottom : 100px;
+	}
+
+	.button_password
+	{
+		display : inline-block;
+		margin : auto;
+		margin-left : 320px;
+		height : 40px;
+		background-color : yellow;
+	}
+
+	.cadre-contact
+	{
+		font-size : 12px;
+		border : 1px black solid;
+		border-radius : 10px;
+		box-shadow : 4px 4px 4px purple;
+		width : 200px;
+		/*margin : auto;*/
+		/*padding-top : 20px;*/
+		margin : 50px 50px 50px 50px ;   /* Comment je fais pour mieux centrer les cadre-contacts ? */
+		display : inline-block;          /* la reunion du meilleur des 2 mondes */
+		background-color: rgb(211, 190, 211);     /* margin-bottom : 150px;      */ /* Remarque : contrairement a la Balise P, la balise Section n'a PAS de margin par default. Sio on veut donc decaller une section, il faut definir une marge */
+	}
+
+	.cadre-contact h3, .cadre-contact span /* LES 2 SPAN NE SE CENTRENT PAS */
+	{
+		text-align : center;
+	}
+
+	/*--------------------------------------------------------------------------------------*/
+
+	.login
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			/*border : 1px solid blue;*/
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+
+	.element2
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		height : 548px;
+	}
+	.element2:nth-child(1)
+	{
+		width : 315px;  /* min-width : 315px;  */
+	}
+	.element2:nth-child(2)
+	{
+		padding : 10px;
+		width : 315px;
+	}
+
+	/*----------------------------------------------*/
+
+	.login_carre
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+
+	.element2_carre
+	{
+		width : 548px;
+		height : 548px;
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+	}
+
+	.element2_carre:nth-child(2)
+	{
+		height : 548px;
+		padding : 10px;
+		margin-left : 10px;
+	}
+
+	/*----------------------------------------------*/
+
+	.login_paysage
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : white;
+	}
+	.element2_paysage
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		height : 350px;
+		width : 548px;
+	}
+	.element2_paysage:nth-child(2)
+	{
+		padding : 10px;
+		margin-left : 10px;
+	}
+
+	/*----------------------------------------------*/
+
+	.login_perruques_gastro
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			/*border : 1px solid blue;*/
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 670px;
+			background-color : white;
+	}
+
+	.element2_perruques_gastro
+	{
+		margin : 10px;
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		/*min-width : 272px;*/
+	}
+
+	/*-------------------------------------------------*/
+
+	.login_mini
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+		position : relative;
+		margin : auto;
+		border-radius : 10px;
+		float : top;
+		justify-content : center;
+		width : 100%;
+		background-color : fuchsia;
+	}
+	.element2_mini
+	{
+		background-color : white;
+		margin : 5px;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+	}
+	.element2_mini:nth-child(2)
+	{
+		flex-grow : 4;
+		padding : 10px;
+	}
+
+	/*----------------------------------------------------*/
+
+	.login_mini_paysage
+	{   
+		display : flex;
+		flex-direction : row;
+		/*	 justify-content : space-around; */
+		/*   flew-wrap: wrap;   */   /* les blocks irons directement à la ligne quand ils n'aurons plus de place */
+		/*   justify-content : flex-start; flex-end; center; space-between; space-around*/
+		/*   height : aapx;     */
+		/*   align-items: space-between;        /* flex-start; flex-end; center; space-between; space-around; baseline*/
+			position : relative;
+			margin : auto;
+			border-radius : 10px;
+			float : top;
+			justify-content : center;
+			width : 100%;
+			background-color : fuchsia;
+	}
+
+	.element2_mini_paysage
+	{
+		background-color : white;
+		border : 1px solid rgba(192,192,192,0.3);
+		border-radius : 10px;
+		margin : 5px;
+	}
+
+	.element2_mini_paysage:nth-child(2)
+	{
+		flex-grow : 3;
+		padding : 10px;
+	}
+
+	/*----------------------------------------------------*/
+
+	.img_grandeur_1
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 313px;
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+		/*border : 1px solid yellow;*/
+	}
+
+	.img_grandeur_profil
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		max-width : 250px;
+		height : 250px;
+		margin : auto;
+		border-radius : 10px;
+		bottom : 500px;
+	}
+	
+	.img_grandeur_paysage
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 548px;
+		height : 348px;
+		margin : auto;
+		border-radius : 10px;
+	}
+
+	.img_grandeur_carre
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 548px;
+		height : 548px;
+		margin : auto;
+		border-radius : 10px;
+	}
+	.img_grandeur_mini
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 93px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+	}
+
+	.img_grandeur_mini_paysage
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 230px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+	}
+
+	.img_grandeur_mini_carre
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		float : left;
+		width : 160px;
+		height : 160px;
+		margin : auto;
+		border-radius : 10px;
+		/*bottom : 500px;*/
+	}
+	
+	.img_grandeur_annonce
+	{ /* Les images des produits qui defilent lorqu on selectionne une categorie */
+		display : inline-block;
+		width : 52.5%;
+		height : 100%;
+		margin : auto;
+		border-radius : 10px;
+		/*border : 1px solid yellow;*/
+	}
+
+	.annonces
+	{   /* balise contenant l'image de PROFIL et les contacts */
+		/*position : fixed;*/
+		/* : 20px 20px 5px 20px;                    /* je decalle l'interieur pour ne pas qu'ils touchent les bordures */
+		width : 62%;    /* 700px */
+		height : 1000px;                                  /* Largeur de 800px selon les exigences du TP */
+		margin : auto;                                   /* Je le centre sur x */
+		margin-top : 20px;
+		margin-bottom : 20px;
+		border-radius : 10px;
+		min-width : 370px;
+		background-image : url("../Images/Annonce/annonce_2.png");
+		background-position : center; /*     rester au centre si on reduit notre image */
+		background-repeat : no-repeat;
+		background-size : cover;
+		border : 2px solid red;
+	}
+
+	.image_grandeur_1:hover, .element2_carre:hover, .element2_paysage:hover,.element2:hover, header:hover, .img_grandeur_mini:hover, .element2_mini:hover, .element2_perruques_gastro:hover
+	{
+		box-shadow : 2px 2px 2px fuchsia;
+	}
+
+	.Vero_Mado
+	{
+		width : 300px;
+		height : 225px;
+		border-radius: 150px;
+	}
+
+	.Vero
+	{
+		width : 200px;
+		height : 200px;
+		border-radius: 150px;
+	}
+
+	.Vero_1
+	{
+		position : absolute;
+		left : 330px;
+		top : 475px;
+		width : 200px;
+		height : 200px;
+		border-radius: 150px;
+	}
+
+	.Information
+	{
+		position : relative;
+		margin : 10px auto;
+		border : 1px dotted green;
+		width : 95%;
+		height : 160px;
+		float : top;
+		padding : 10px;
+	}
+
+	.user_photo
+	{
+		width : 170px;
+		height : 150px;
+		position : relative;
+	}
+/*
+	footer 
+	{
+		margin-top : 30px;
+		min-height : 20px; 
+		width : 100%;
+		background-color : rgba(192,192,192,0.3);
+		color : black;
+		text-align : center;
+		clear : both;
+		border : 1px solid rgba(192,192,192,0.3);
+	}
+*/
+}
